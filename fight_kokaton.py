@@ -132,7 +132,8 @@ class Bomb:
         self.rct.move_ip(self.vx, self.vy)
         screen.blit(self.img, self.rct)
 
-class Explosion: #爆弾
+class Explosion: 
+    """爆弾に関するクラス"""
     def __init__(self, bomb:Bomb, life: int):
         exp_img = pg.image.load("ex03/fig/explosion.gif")
         self._imgs = [exp_img,
