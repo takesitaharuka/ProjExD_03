@@ -131,7 +131,7 @@ def main():
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
     bg_img = pg.image.load("ex03/fig/pg_bg.jpg")
     bird = Bird(3, (900, 400))
-    bomb = Bomb((255, 0, 0), 100)
+    bomb = Bomb((255, 0, 0), 10)
     beam = None
 
     clock = pg.time.Clock()
@@ -158,6 +158,8 @@ def main():
             if beam.rct.colliderect(bomb.rct):
                 bomb = None
                 beam = None
+                bird.change_img(6, screen)
+                pg.display.update()
                            
 
         key_lst = pg.key.get_pressed()
