@@ -175,7 +175,7 @@ def main():
         for explosion in explosions:
             explosion.update(screen)
         
-        for bomb in bombs:
+        for bomb in bombs:　
             if bird.rct.colliderect(bomb.rct):
             # ゲームオーバー時に，こうかとん画像を切り替え，1秒間表示させる
                 bird.change_img(8, screen)
